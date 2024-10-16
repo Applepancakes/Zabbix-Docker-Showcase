@@ -46,17 +46,28 @@ The following components need to be running in order:
 Store the following command in a `.txt` file and rename it to `.bat` for execution:
 
 docker run -d --name zabbix-mysql ^
-    --network zabbix-network ^
+    --network zabbix-network ^ 
+    
     -v "C:\docker\zabbix\mysql:/var/lib/mysql" ^
+
     -e MYSQL_ROOT_PASSWORD=P@ssw0rd!2024 ^
+    
     -e MYSQL_DATABASE=zabbix ^
+    
     -e MYSQL_USER=zabbix ^
+    
     -e MYSQL_PASSWORD=Z@bb!xP@ssw0rd$2024 ^
+    
     -e TZ=America/New_York ^
+
     -p 3306:3306 ^
+    
     mysql:8.0-oracle ^
+    
     --character-set-server=UTF8MB4 ^
+    
     --collation-server=UTF8MB4_bin ^
+    
     --default-authentication-plugin=caching_sha2_password
 
 
