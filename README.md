@@ -67,7 +67,7 @@ docker run --name zabbix-server-mysql -t ^
     -e DB_SERVER_HOST="zabbix-mysql" ^
     -e MYSQL_DATABASE="zabbix" ^
     -e MYSQL_USER="zabbix" ^
-    -e MYSQL_PASSWORD="Z@bb!xP@ssw0rd$2024" ^
+    -e MYSQL_PASSWORD="agentpa33" ^
     -e MYSQL_ROOT_PASSWORD="r00tpa33" ^
     -v C:\docker\zabbix\server:/var/lib/zabbix ^
     -p 10051:10051 ^
