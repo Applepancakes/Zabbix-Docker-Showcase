@@ -127,10 +127,10 @@ docker exec -it zabbix-server-mysql /bin/sh
 
 ## Docker Information
 To install additional tools inside the container:
-
+```
 docker exec -u root -it zabbix-server-mysql apk update
 docker exec -u root -it zabbix-server-mysql apk add net-snmp-tools
-
+````
 
 ### Changing the Subnet of the Docker Network
 1. List existing networks:
