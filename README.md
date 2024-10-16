@@ -25,10 +25,10 @@ This repository demonstrates how to deploy and manage Zabbix using Docker contai
 ### Step 1
 Create the necessary directories for the MySQL and Zabbix server:
 
-
+```
 mkdir C:\docker\zabbix\server
 mkdir C:\docker\zabbix\mysql
-
+```
 
 ### Networking
 This section is critical for container communication across different ports. To create a custom Docker network, run:
@@ -51,7 +51,7 @@ docker run -d --name zabbix-mysql ^
         -e MYSQL_ROOT_PASSWORD=r00tpa33 ^
         -e MYSQL_DATABASE=zabbix ^
         -e MYSQL_USER=zabbix ^
-        -e MYSQL_PASSWORD=Z@bb!xP@ssw0rd$2024 ^
+        -e MYSQL_PASSWORD=agentpa33 ^
         -e TZ=America/New_York ^
         -p 3306:3306 ^
         mysql:8.0-oracle ^
@@ -83,7 +83,7 @@ docker run -d --name zabbix-web-nginx-mysql ^
     -e DB_SERVER_HOST="zabbix-mysql" ^
     -e MYSQL_DATABASE="zabbix" ^
     -e MYSQL_USER="zabbix" ^
-    -e MYSQL_PASSWORD="Z@bb!xP@ssw0rd$2024" ^
+    -e MYSQL_PASSWORD="agentpa33" ^
     -e MYSQL_ROOT_PASSWORD="r00tpa33" ^
     -e TZ=America/New_York ^
     -p 8080:8080 ^
