@@ -120,8 +120,10 @@ docker exec -it zabbix-server-mysql /bin/sh
 - Check for communication issues due to router configuration, APN filters, or IP problems.
 - Use the following commands to check logs:
 
+```
     docker logs zabbix-web-nginx-mysql > "C:\tmp\zabbix-web-nginx-mysql_$(Get-Date -Format yyyy-MM-dd).txt"
     docker logs zabbix-server-mysql > "C:\tmp\zabbix-server-mysql_$(Get-Date -Format yyyy-MM-dd).txt"
+```
 
 ## Docker Information
 To install additional tools inside the container:
