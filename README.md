@@ -146,11 +146,11 @@ docker exec -u root -it zabbix-server-mysql apk add net-snmp-tools
    docker network create --subnet=192.168.8.0/24 zabbix-network
    
 
-### SNMP Walk Inside the Container
-
+### SNMP Walk the Container
+```
 snmpwalk -v2c -c WorkTest 192.168.8.10
 snmpwalk -v2c -c Press 192.168.8.238
-
+```
 
 ## Various Resources
 - [Zabbix Documentation](https://www.zabbix.com/documentation/current/manual)
