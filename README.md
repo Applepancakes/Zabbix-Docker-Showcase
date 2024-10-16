@@ -48,7 +48,7 @@ Store the following command in a .txt file and rename it to .bat for execution:
 docker run -d --name zabbix-mysql ^
         --network zabbix-network ^
         -v "C:\docker\zabbix\mysql:/var/lib/mysql" ^
-        -e MYSQL_ROOT_PASSWORD=P@ssw0rd!2024 ^
+        -e MYSQL_ROOT_PASSWORD=r00tpa33 ^
         -e MYSQL_DATABASE=zabbix ^
         -e MYSQL_USER=zabbix ^
         -e MYSQL_PASSWORD=Z@bb!xP@ssw0rd$2024 ^
@@ -61,22 +61,22 @@ docker run -d --name zabbix-mysql ^
 ```
 
 ### Zabbix Server Component
-
+```
 docker run --name zabbix-server-mysql -t ^
     --network=zabbix-network ^
     -e DB_SERVER_HOST="zabbix-mysql" ^
     -e MYSQL_DATABASE="zabbix" ^
     -e MYSQL_USER="zabbix" ^
     -e MYSQL_PASSWORD="Z@bb!xP@ssw0rd$2024" ^
-    -e MYSQL_ROOT_PASSWORD="P@ssw0rd!2024" ^
+    -e MYSQL_ROOT_PASSWORD="r00tpa33" ^
     -v C:\docker\zabbix\server:/var/lib/zabbix ^
     -p 10051:10051 ^
     --restart unless-stopped ^
     -d zabbix/zabbix-server-mysql:alpine-7.0-latest
-
+```
 
 ### Zabbix Frontend Component
-
+```
 docker run -d --name zabbix-web-nginx-mysql ^
     --network=zabbix-network ^
     -e ZBX_SERVER_HOST="zabbix-server-mysql" ^
@@ -84,20 +84,20 @@ docker run -d --name zabbix-web-nginx-mysql ^
     -e MYSQL_DATABASE="zabbix" ^
     -e MYSQL_USER="zabbix" ^
     -e MYSQL_PASSWORD="Z@bb!xP@ssw0rd$2024" ^
-    -e MYSQL_ROOT_PASSWORD="P@ssw0rd!2024" ^
+    -e MYSQL_ROOT_PASSWORD="r00tpa33" ^
     -e TZ=America/New_York ^
     -p 8080:8080 ^
     --restart unless-stopped ^
     -d zabbix/zabbix-web-nginx-mysql:alpine-7.0-latest
-
+```
 
 ## User Credentials
 - **Root Account**
   - **Username**: root
-  - **Password**: P@ssw0rd!2024 (set by `MYSQL_ROOT_PASSWORD`)
+  - **Password**: r00tpa33 (set by `MYSQL_ROOT_PASSWORD`)
 - **Zabbix User**
   - **Username**: zabbix (set by `MYSQL_USER`)
-  - **Password**: Z@bb!xP@ssw0rd$2024 (set by `MYSQL_PASSWORD`)
+  - **Password**: agentpa33 (set by `MYSQL_PASSWORD`)
 
 ## General Use & Maintenance
 ### Accessing Docker Containers
