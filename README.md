@@ -45,11 +45,11 @@ The following components need to be running in order:
 ### MySQL Component
 Store the following command in a `.txt` file and rename it to `.bat` for execution:
 
-docker run -d --name zabbix-mysql ^
-        --network zabbix-network ^ 
-        -v "C:\docker\zabbix\mysql:/var/lib/mysql" ^
-        -e MYSQL_ROOT_PASSWORD=P@ssw0rd!2024 ^
-        -e MYSQL_DATABASE=zabbix ^
+docker run -d --name zabbix-mysql /
+        --network zabbix-network /
+        -v "C:\docker\zabbix\mysql:/var/lib/mysql" /
+        -e MYSQL_ROOT_PASSWORD=P@ssw0rd!2024 /
+        -e MYSQL_DATABASE=zabbix /
         -e MYSQL_USER=zabbix ^
         -e MYSQL_PASSWORD=Z@bb!xP@ssw0rd$2024 ^
         -e TZ=America/New_York ^
