@@ -157,6 +157,4 @@ snmpwalk -v2c -c Press 192.168.8.238
 - [DataCamp MySQL Docker Setup](https://www.datacamp.com/tutorial/set-up-and-configure-mysql-in-docker)
 
 
-_Paciencia y fe_
-
 
