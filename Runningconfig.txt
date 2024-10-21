@@ -1,22 +1,31 @@
+! Set the hostname of the switch
 hostname Switch1
 
+! Configure VLAN with an IP address and bring the interface up
 interface vlan 500
  ip address 192.168.1.10 255.255.255.0
  no shutdown
 
+! Set the default gateway for the switch
 ip default-gateway 192.168.1.1
 
+! Configure domain name for the switch
 ip domain-name local
 
+! Generate RSA keys for SSH encryption (required for SSH access)
 crypto key generate rsa
+
+! Create a user with privilege level 15 and an encrypted password
 username Devtest1 privilege 15 secret showcase
 
 –
 
+! Console access configuration with password protection
 line con 0
  password MyConsolePassword
  login
 
+! VTY (Telnet/SSH) access configuration, only SSH is allowed
 line vty 0 15
  transport input ssh
  password MyVTYPassword
@@ -25,19 +34,27 @@ line vty 0 15
 
 –
 
+! Configure SNMPv3 user with authentication and encryption (SHA and AES 128)
 snmp-server user Tester1 WorkTest v3 auth sha Youmaypass priv aes 128 Youmaysee
+
+! Configure SNMP community with read-write access (legacy SNMPv2)
 snmp-server community Press RW
 
-
-
+! Enable SSH version 2 for stronger encryption
 ip ssh version 2
+
+! Enable password encryption to hide plaintext passwords in the config
 service password-encryption
+
+! Enable detailed timestamps for logging purposes
 service timestamps log datetime msec
+
+! Increase logging buffer size for better log storage
 logging buffered 51200
 
-! Shutting down FastEthernet ports 5-12 for security
+! Shut down FastEthernet ports 5-12 for security (unused ports)
 interface range FastEthernet0/5 - 12
  shutdown
 
-
+! Save the configuration to memory
 write memory
