@@ -160,14 +160,27 @@ snmpwalk -v2c -c Press 192.168.8.238
 
 ## Images
 
+Sample graph visualizing Bandwidth
+
 ![graph](https://github.com/user-attachments/assets/01737507-28a5-4f2a-abe3-8e5dd3b44a57)
+
+Geo map with live links, visualizing connections over different geographical regions
 
 ![langeomap](https://github.com/user-attachments/assets/0903ac2e-53c2-4ca9-a40c-52229e757076)
 
+Showcase of the lan topology visualizations, offers tracking of link issues and device issues
+
 ![showcaselanmap](https://github.com/user-attachments/assets/8f929561-6f35-4e21-bc98-b72fc1ec4044)
+
+Visulization of honeycomb dashboard widget and other tools
 
 ![showcaseimagehoneycomb](https://github.com/user-attachments/assets/86824437-7d6d-4071-9918-db342fa7c2bc)
 
+Cisco swtich Overlay to simulate link status
+
 ![showcaseswitchoverlay](https://github.com/user-attachments/assets/b3ea166f-1948-46e1-8009-ab24b6145a32)
 
+Dashboard of assets
+
+![fullldash](https://github.com/user-attachments/assets/1aaad1e9-04dc-426a-9259-fa17fa7dc5e2)
 
