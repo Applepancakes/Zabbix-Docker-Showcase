@@ -158,5 +158,16 @@ snmpwalk -v2c -c Press 192.168.8.238
 - [Zabbix Docker Wiki](https://github.com/zabbix/zabbix-docker/wiki/Docker-101---Before-starting-with-containerized-Zabbix)
 - [DataCamp MySQL Docker Setup](https://www.datacamp.com/tutorial/set-up-and-configure-mysql-in-docker)
 
+## Images
+
+![graph](https://github.com/user-attachments/assets/01737507-28a5-4f2a-abe3-8e5dd3b44a57)
+
+![langeomap](https://github.com/user-attachments/assets/0903ac2e-53c2-4ca9-a40c-52229e757076)
+
+![showcaselanmap](https://github.com/user-attachments/assets/8f929561-6f35-4e21-bc98-b72fc1ec4044)
+
+![showcaseimagehoneycomb](https://github.com/user-attachments/assets/86824437-7d6d-4071-9918-db342fa7c2bc)
+
+![showcaseswitchoverlay](https://github.com/user-attachments/assets/b3ea166f-1948-46e1-8009-ab24b6145a32)
 
 
