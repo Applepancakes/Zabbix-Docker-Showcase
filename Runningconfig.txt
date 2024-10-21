@@ -1,0 +1,43 @@
+hostname Switch1
+
+interface vlan 500
+ ip address 192.168.1.10 255.255.255.0
+ no shutdown
+
+ip default-gateway 192.168.1.1
+
+ip domain-name local
+
+crypto key generate rsa
+username Devtest1 privilege 15 secret showcase
+
+–
+
+line con 0
+ password MyConsolePassword
+ login
+
+line vty 0 15
+ transport input ssh
+ password MyVTYPassword
+ login local
+ transport input ssh
+
+–
+
+snmp-server user Tester1 WorkTest v3 auth sha Youmaypass priv aes 128 Youmaysee
+snmp-server community Press RW
+
+
+
+ip ssh version 2
+service password-encryption
+service timestamps log datetime msec
+logging buffered 51200
+
+! Shutting down FastEthernet ports 5-12 for security
+interface range FastEthernet0/5 - 12
+ shutdown
+
+
+write memory
